@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .todoapp {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    header input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .main {
+      margin-top: 20px;
+    }
+
+    .task-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .task-list li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .task-list li input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .task-list li .completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .filter button {
+      margin-right: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .filter button:hover {
+      background-color: #0056b3;
+    }
+
+    footer button {
+      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+      background-color: #dc3545;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    footer button:hover {
+      background-color: #bd2130;
+    }
+  </style>
+</head>
+<body>
+  <div class="todoapp">
+    <header>
+      <h1>Todo App</h1>
+      <input type="text" id="taskInput" placeholder="Add a task...">
+    </header>
+    <section class="main">
+      <ul id="taskList" class="task-list">
+        
+      </ul>
+    </section>
+    <footer>
+      <div class="filter">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('active')">Active</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+      </div>
+      <button onclick="deleteAllTasks()">Clear All</button>
+    </footer>
+  </div>
+
+  <script src="scriptbt1.js"></script>
+  
+    
+  
+</body>
+</html>
