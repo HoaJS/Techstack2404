@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <style>
+        .required::after {
+            content: " *";
+            color: red;
+        }
+        #message {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Đăng ký tài khoản</h2>
+    <form id="registrationForm">
+        
+
+        <label for="fullName" class="required">Họ và tên</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="email" class="required">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Giới tính:</label>
+        <input type="radio" id="male" name="gender" value="Nam">
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="Nữ">
+        <label for="female">Nữ</label><br><br>
+
+        <label for="password" class="required">Mật khẩu: (tối thiểu 6 ký tự)</label>
+        <input type="password" id="password" name="password" minlength="6" required><br><br>
+
+        <label for="age">Tuổi:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <lable for="Address">Địa chỉ</lable>
+        <input type="gohome" id="Address" name="Address"><br><br>
+
+        <button type="button" onclick="validateForm()">Đăng ký</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            let email = document.getElementById('email').value;
+            let fullName = document.getElementById('fullName').value;
+            let genderMale = document.getElementById('male').checked;
+            let genderFemale = document.getElementById('female').checked;
+            let password = document.getElementById('password').value;
+            let message = document.getElementById('message');
+
+            if (!email || !fullName || (!genderMale && !genderFemale) || !password) {
+                message.textContent = "Nhập đầy đủ thông tin.";
+                message.style.color = "red";
+            } else {
+                message.textContent = "Đăng ký thành công.";
+                message.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

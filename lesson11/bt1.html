@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<img
+			id="img"
+			src="https://vcdn1-giaitri.vnecdn.net/2022/04/25/2vu-thi-nhu-quy-nh-1650856523.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=6m-0Xoy3Wz0Rsa9-KLUPaA"
+			alt="Ảnh người mẫu"
+			width="100px"
+			height="100px"
+		/>
+		<div style="margin-top: 12px">
+			<label>URL</label>
+			<input id="url" type="text" placeholder="Nhập url của ảnh" />
+		</div>
+        <div style="margin-top: 12px">
+			<label>Width</label>
+			<input id="width" type="text" placeholder="Nhập chiều rộng của ảnh" />
+		</div>
+        <div style="margin-top: 12px">
+			<label>Height</label>
+			<input id="height" type="text" placeholder="Nhập chiều cao của ảnh" />
+		</div>
+		<div style="margin-top: 12px">
+			<lable>Border Radius</lable>
+			<input id="border_radius" type="text" placeholder="Nhập bo góc ảnh"/>
+		</div>
+		<div style="margin-top: 12px">
+			<lable>Alt</lable>
+			<input id="Alt" type="text" placeholder="Nhập URL ảnh" />
+		</div>
+
+		</div>
+		<script>
+            const $image = document.getElementById('img');
+			const $url = document.getElementById('url');
+			const $width = document.getElementById('width');
+            const $height = document.getElementById('height');
+			const $border_radius = document.getElementById('border_radius');
+
+			$url.onchange = function () {
+				const value = $url.value;
+				$image.src = value;
+			};
+
+            $width.oninput = function (){
+                const value = $width.value;
+                console.log(value);
+                $image.width = value
+            }
+
+            $height.oninput = function (){
+                const value = $height.value;
+                console.log(value);
+                $image.height = value
+            }
+			$border_radius.oninput = function (){
+    const value = $border_radius.value;
+    console.log(value);
+    $image.style.borderRadius = value + 'px';
+}
+$Alt.oninput = function () {
+    const value = $Alt.value;
+    console.log(value);
+    $image.alt = value;
+};
+
+			
+			
+			
+		</script>
+	</body>
+</html>

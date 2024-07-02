@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, intial-sacle=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .container{
+            width:40%;
+            Background:rgb(0, 255, 247);
+            border: 1px solid black;
+            padding:15px;
+           
+
+        }
+        .heading{
+            Background:pink;
+            border: 1px solid rgb(237, 12, 151);
+             padding:15px;
+        }
+             
+        
+        .button1{
+            padding:10px 20px;
+            background:rgb(230, 50, 122);
+            border:none;
+                border-radius: 4px;
+        
+        }
+        .button2{
+            padding:10px 20px;
+            background:blue;
+            border:none;
+                border-radius: 4px;
+        }
+        .tittle{
+            background:rgb(0, 213, 255);
+            border: 1px solid black;
+            padding: 12px 4px;
+            width: 120px;
+            text-align: center;
+        }
+        .button{
+            position:relative;
+        }
+        .tittle{
+            position:absolute;
+            top: 150px;
+            left: 30px;
+            
+           
+}
+.tittle:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);}
+
+        
+
+        
+        
+    </style>
+    <body>
+        <div class="container">
+      <p class="heading">Moreover, she is a good role model for me to follow. She always tries to get on well with people who live next door and help everyone when they are in difficulties, so most of them respect and love her. I admire and look up to my mother because she not only brings me up well but also stands by me and gives some help if necessary. For example, when I encounter some difficulties, she will give me some precious advice to help me solve those problems. </p>
+       <div class="button">
+      <button class="button1">delete</button>
+      <button class="button2">Keep</button>
+      </div>
+      <p class="tittle">Có không giữ, mất đừng tiếc
+      </p>
+        </div>
+    </body>
+</html> 

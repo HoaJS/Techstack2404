@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách công việc cần làm</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Danh sách công việc cần làm</h1>
+    <input type="text" id="new-task" placeholder="Nhập nội dung việc mới">
+    <button onclick="addTask()">Tạo công việc</button>
+    
+    <ul id="todo-list">
+        <li class="todo-item">Đi chơi</li>
+        <li class="todo-item">Làm bài tập</li>
+        <li class="todo-item">Giặt quần áo</li>
+    </ul>
+
+    <script>
+        let taskCounter = 0; // Biến đếm công việc
+    
+        function addTask() {
+            const taskInput = document.getElementById("new-task");
+            const taskValue = taskInput.value.trim();
+    
+            if (taskValue !== "") {
+                const taskList = document.getElementById("todo-list");
+                const newTask = document.createElement("div");
+                newTask.className = "todo-item";
+                newTask.textContent = (++taskCounter) + ". " + taskValue; // Thêm dấu chấm trước mỗi công việc
+    
+                taskList.appendChild(newTask);
+                taskInput.value = "";
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
