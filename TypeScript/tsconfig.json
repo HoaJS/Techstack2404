@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",        // Phiên bản JavaScript mục tiêu
+    "module": "commonjs",   // Hệ thống module
+    "outDir": "./dist",     // Thư mục đầu ra cho các tệp biên dịch
+    "rootDir": "./src",     // Thư mục gốc cho các tệp nguồn
+    "strict": true          // Bật tất cả các kiểm tra nghiêm ngặt
+  },
+  "include": ["src"],       // Thư mục chứa các tệp nguồn
+  "exclude": ["node_modules"] // Loại trừ thư mục node_modules
+}
