@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "D:/index.html"
+		},
+		{
+			"path": "D:/Lesson2"
+		},
+		{
+			"path": "D:/my-react-app"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Techstack2404"
+	}
+}
