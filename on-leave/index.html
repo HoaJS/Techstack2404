@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giấy Nghỉ Phép</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #eda4d1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .email-body {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đơn Xin Nghỉ Phép</h1>
+        <div class="email-body">
+            <p>Kính gửi anh/chị <span id="name">[Tên]</span>,</p>
+            <p>Tôi nộp đơn xin nghỉ phép từ ngày <span id="startDate">[Ngày bắt đầu]</span>.</p>
+            <p>Lý do: <span id="reason">[Lý do]</span>.</p>
+            <p>Bạn có thể phê duyệt tại link này: <a href="https://docs.google.com/spreadsheets/d/1JDwFyZEhewaeQwadRPWMfF9YaVtE088K_cG26EZ1_I0/edit?gid=1167923302#gid=1167923302" class="button">Phê duyệt tại đây</a></p>
+            <p>Trân trọng.</p>
+        </div>
+    </div>
+
+    <script>
+        // Hàm để thay thế nội dung động từ JavaScript (hoặc có thể làm việc với API)
+        function setContent(name, startDate, reason) {
+            document.getElementById('name').textContent = name;
+            document.getElementById('startDate').textContent = startDate;
+            document.getElementById('reason').textContent = reason;
+        }
+
+        // Ví dụ về việc thiết lập nội dung (có thể thay đổi bằng cách lấy từ API hoặc dữ liệu khác)
+        setContent('Nguyễn Văn A', 'dd/mm/yyyy', 'Lý do cá nhân');
+    </script>
+</body>
+</html>
